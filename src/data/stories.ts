@@ -72,7 +72,7 @@ export const invitation = {
   heading: 'Before You Continue',
   invitation: "Read only if you're interested in seeing yourself through my eyes.",
   body: "This is a collection of memories, little moments, and feelings from my side of the story. You don't have to read everything. I simply wanted to put these memories into words.",
-  primary: 'What to know more?',
+  primary: 'Want to know more?',
   secondary: 'Just leave me with the birthday wishes',
 }
 
