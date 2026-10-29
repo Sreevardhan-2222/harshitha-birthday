@@ -762,10 +762,6 @@ main:focus {
   text-align: center;
 }
 
-.index__header h1 {
-  margin-top: 1rem;
-}
-
 .index__subtitle {
   margin-top: 1rem;
   font-family: var(--font-display);

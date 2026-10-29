@@ -19,7 +19,6 @@ export default function StoryIndexPage() {
         </Link>
       </div>
       <header className="index__header">
-        <p className="eyebrow">Four photographs · three memories · one letter</p>
         <h1 className="display">{storyIndex.heading}</h1>
         <p className="index__subtitle">{storyIndex.subtitle}</p>
         <Divider className="divider" />
