@@ -72,8 +72,15 @@ export const invitation = {
   heading: 'Before You Continue',
   invitation: "Read only if you're interested in seeing yourself through my eyes.",
   body: "This is a collection of memories, little moments, and feelings from my side of the story. You don't have to read everything. I simply wanted to put these memories into words.",
-  primary: 'Want to know more?',
+  primary: 'Open stories..!?',
   secondary: 'Just leave me with the birthday wishes',
+}
+
+export const skipConfirm = {
+  question: 'You really want to skip the story?',
+  body: "It's okay if you do. The birthday wishes will always be yours.",
+  yes: 'Yes, just the wishes',
+  no: 'No, open the stories',
 }
 
 export const storyIndex = {
@@ -169,61 +176,66 @@ export const chapters: Chapter[] = [
       { kind: 'note', text: 'Mid-April · exams until May 22' },
       {
         kind: 'p',
-        text: 'It was mid-April, and our semester-end exams ran until May 22. My birthday is on May 23 — something you may not know.',
+        text: 'It was mid-April, and we had our semester-end exams until May 22. My birthday was on May 23, which you may not know.',
       },
+      { kind: 'note', text: 'May 23 · a birthday wish' },
       {
         kind: 'p',
-        text: "I don't normally add people to my Close Friends list just for a birthday, but I wanted you to wish me, so I added you. You did wish me, and that was all that mattered to me then.",
+        text: "I normally don't re-mention birthday stories to my story but I wanted to make you wish and I knew if you saw my story you would wish for sure so I added you to my close friends and re-mentioned everyone's stories and as I thought you saw one of them and wished me and that wish was all that mattered me.",
       },
+      { kind: 'note', text: 'Semester break · Sathwik’s house' },
       {
         kind: 'p',
-        text: "Later, during our semester-end break, I went to Sathwik's house. Sudharshana Chickappa asked if I would come to Bangalore with them, since Sathwik would be going there a week earlier. I agreed, because I could drive the XUV — and there was also a chance I might meet you.",
+        text: "Then, on a fresh day, I went to Sathwik's house as it was our semester-end break. There, Sudharshana Chickappa asked me if I would come to Bangalore with them, as Sathwik would go there a week earlier. I agreed because I could drive the XUV, and also, there was a chance that I could meet you.",
       },
       { kind: 'note', text: 'Bangalore · around 6:30 p.m.' },
       {
         kind: 'p',
-        text: "We reached Bangalore at around 6:30 p.m. I didn't know anyone there, so I spent time with my Doddammas until you arrived. I was nervous, but I tried to talk to you. I don't think you noticed me then, but I didn't lose hope.",
+        text: "So, it was the day we came to Bangalore, and we reached there at around 6:30 p.m. As I didn't know anyone there, I was passing the time with my Doddammas until you entered. I was too scared, but I tried to talk to you. However, I guess you didn't see me there and you walked away, but I didn't lose hope.",
       },
       {
         kind: 'p',
-        text: 'While you were having your welcome snacks, I waited. A PUC friend arrived, and I got distracted. Later, I noticed you had been missing for around twenty minutes. Then I saw you sitting in the fourth or fifth row. You had mehendi on your arms, so I guessed you had gone to get it applied.',
+        text: 'When you were having your welcome snacks, I just waited. By then, one of my PUC friends came, so I got a little distracted and later found you missing. After around 20 minutes, I saw you sitting in the fourth or fifth row. There was mehendi on your arms, so my conclusion was that you had gone to get mehendi applied on your hand.',
+      },
+      { kind: 'note', text: 'A red outfit, and the dance' },
+      {
+        kind: 'p',
+        text: "If I still remember correctly, you were wearing a red outfit, some kind of top or kurta. I don't know what you call it...",
       },
       {
         kind: 'p',
-        text: 'If I remember correctly, you were wearing a red outfit — perhaps a top, or a kurta.',
+        text: 'Then, you were enjoying the dance. I know you love dancing and singing, your reel like theme was mostly related to them.',
       },
       {
         kind: 'p',
-        text: 'You were enjoying the dance. I knew you liked dancing and singing; I remembered seeing a post related to Adda, where you were doing something dance-related.',
-      },
-      {
-        kind: 'p',
-        text: "I was sitting two rows behind you, and I could see your face clearly. Later, we went for dinner, and I saw you again with your brother. I tried talking to you, but I don't think you recognised me.",
+        text: "I was sitting two rows behind you, from where your face was clearly visible. Then for a while I had collage club meeting and when I returned it was time for dinner, and I saw you again. You were with your brother, and I tried talking to you again. I came near you, but there was no use, I guess you didn't recognise me, two three times I tried but I couldn't talk.",
       },
       { kind: 'break' },
+      { kind: 'note', text: 'The night and the next day' },
       {
         kind: 'p',
-        text: "I thought you might come back the next day, so we planned to stay at my cousin's house. Then we met near the rooms and exchanged a simple “Hi”. After that, I changed my plan.",
+        text: "I thought that if you came that day, you would also come the next day and I decided we could talk the next day, so we packed our bags and we decided to stay in my cousin's house which is near Vidyapeeta. But at a very good time, we met near the rooms and just waved each other and I changed my decision thinking there is still a chance to talk to you.",
       },
       {
         kind: 'p',
-        text: 'I thought you were staying there, but I think you had only come for a visit. I stayed because I had an internship project to submit the next evening. I wanted to finish it so I would be free if we met, so I completed it at around 3 a.m. and slept.',
+        text: 'I thought you were staying there, but I think you had just come for a visit. Everyone including my relatives left and However I had no choice than staying there so, I stayed there and as I was working on a internship those two months, I had to submit a project by next evening. As I wanted no disturbance when we met, I completed the project at around 3:00 a.m. and slept...',
       },
       {
         kind: 'p',
-        text: 'The next day, I waited. That was when I recognised how much the possibility of seeing you had shaped my plans.',
+        text: "The next day, I just waited the whole day. That's the moment I recognised... that's all.",
       },
       {
         kind: 'quote',
-        text: 'Still, it was a good experience. It felt like part of a movie, and I accepted it as a memory.',
+        text: 'Still, it was a good experience, and I accepted it...',
       },
       {
         kind: 'p',
-        text: 'To be honest, you looked very good that night. I thought I would tell you what I felt one day, but I never found the chance.',
+        text: "To be honest, you were looking very good that night. I decided that I would tell you what I felt about you one day I was thinking you may also feel the same I don't know why i thought so, but still I satisfied myself like that.....",
       },
+      { kind: 'note', text: 'After returning' },
       {
         kind: 'p',
-        text: 'After returning, I spent the next month on my internship. Then college started, and I went back to my usual routine.',
+        text: 'After returning, the next month was entirely spent on the internship. Then college started, and I came back to the same routine...',
       },
     ],
   },
@@ -239,52 +251,62 @@ export const chapters: Chapter[] = [
       { kind: 'note', text: 'Navaratri · a window seat, around 7 p.m.' },
       {
         kind: 'p',
-        text: "Then, on a fine evening, I was leaving home for Navaratri and got a window seat. It was around 7 p.m., and a good song was playing. Meeting you in person wasn't possible, so I typed a long message and sent it. I hadn't even told my friends.",
+        text: 'Then, on a fine evening, I was leaving home for Navaratri, and I got a window seat in the bus. It was around 7:00 p.m., and a good song was playing with a chill weather in Keralam. Anyway, meeting you in person was not possible, so I typed a long message and forwarded it. I didn\'t even tell my friends about it.',
       },
       {
         kind: 'p',
-        text: "You did what you felt was right. Those moments were from my point of view, while you saw me as a stranger — and that wasn't wrong. You rejected me gently, and I didn't feel bad in that moment. The sadness came when I went to sleep that night. It was one of the saddest nights I had experienced.",
+        text: "And, as anyone would, you did what you felt was right. All those moments were from my point of view, whereas you saw me as a stranger, which is not at all wrong. You rejected me very smoothly, and I didn't feel bad at that moment. I started to feel bad when I went to sleep that night. To be honest, that was the saddest night I had ever experienced.",
       },
+      { kind: 'note', text: 'The saddest night' },
       {
         kind: 'p',
-        text: "I decided I wouldn't get that attached to anyone again. I deleted the stories I had posted for you and tried to sleep, but I couldn't. So I planned a trip to Madikeri to clear my head. I told my family and called Sanjana, and everyone agreed to come.",
+        text: "I decided that I would never get attached to anyone this much again. As I had posted everything for you, I deleted those stories and tried to sleep, but I couldn't. So, I planned a trip to Madikeri to forget all this. I told my family about it and called Sanjana, and everyone agreed to come.",
       },
       { kind: 'note', text: '218 km through the ghats' },
       {
         kind: 'p',
-        text: 'The next day, after Nithya Pooja, I drove around 218 km to Madikeri, through peaceful roads and the beautiful weather of the ghats. After five hours, my cousins and I met up and enjoyed ourselves.',
+        text: 'The next day, after Nithya Pooja, I drove all the way to Madikeri, around 218 km, through peaceful roads and the beautiful weather of the ghats. After a five-hour drive, my cousins and I met up and enjoyed ourselves.',
       },
       {
         kind: 'p',
-        text: "As always, I clicked photos, but this time I had no reason to post them, so I kept them to myself. Sanjana posted some photos, and I reposted them. I checked whether you had seen my story, but as far as I could tell, you hadn't viewed it in the first three hours. By then, I had deleted Instagram and reached home.",
+        text: "As always, I clicked photos, but this time, I had no reason to post them, so I kept them to myself. However, Sanjana posted some photos, and I simply reposted them. Again, I checked whether you had seen my story, but for the first three hours, you didn't see it, I guess. By then, I had deleted Instagram and reached home.",
       },
       {
         kind: 'p',
-        text: "The next three days were Mahanavami and Vijayadashami, and there was plenty of work at my father's temple, including Vahana Pooja and Ayudha Pooja.",
+        text: "The next three days were Mahanavami and Vijayadashami, and there was quite a workload at my father's temple. There were Vahana Pooja, Ayudha Pooja, and everything else.",
       },
+      { kind: 'note', text: 'Back at the hostel' },
       {
         kind: 'p',
-        text: "After returning to the hostel, I missed my routine, so I downloaded Instagram again, opened your profile, and realised that forgetting you wasn't going to be easy.",
+        text: "After coming back to the hostel, I missed my routine, so I downloaded Instagram again and realized that it was impossible to forget you I informed non of my friends about this for a week then they started asking why are you lost this days so I informed three of my very close friends, they said non of girls nowadays reject directly, they give fake hopes and end it all one day. Seeing this the thing you did was absolutely right and that made me understand my choice was absolutely perfect. I don't know if you remember but you posted a story sitting next to Ronald McDonald Clown and so as to recreate I posted a story sitting in the same side of the clown thinking you will notice but now I know you didn't anyway you would have rejected because of this behavior of mine or my face but I will always be glad I met a girl like you.....",
       },
       { kind: 'break' },
       {
         kind: 'p',
-        text: 'Whatever your opinion of me, this was the first time I had thought so much about a girl. The past year felt like heaven to me. I had never been attached to someone this way before. Even though we never really talked in person, the experience remains a beautiful part of my life.',
+        text: "Whatever your opinion is, whatever you think about me, this is the first time I have thought this much about a girl. The past year felt like heaven to me. I have never been attached to a girl like this before. Even though we didn't talk in person even once, this experience was no less than a beautiful part of my life.",
       },
       {
         kind: 'p',
-        text: "I created this website to express what I felt. I don't know if you will read it, but these words come from my heart.",
+        text: "I am creating this whole thing to express how I feel. I don't know if you will read this, but all of this came from my heart...",
       },
       {
         kind: 'quote',
-        text: "I can't pretend the experience meant nothing to me, and I don't want to turn it into resentment. I can never hate you.",
+        text: "I can never forget you, and I don't think I will ever get attached to a person like this again. I can never hate you...",
       },
       {
         kind: 'p',
-        text: "If you've read this much, thank you. Sometimes I wonder whether our paths might have been different in another universe, or another lifetime.",
+        text: 'You maybe seeing some others as I see you even though I have to accept that, still I will always be waiting for your one replay or again like in my story, I was always sad that you never liked my insta posts still I thought it was because of my face cut.....',
+      },
+      {
+        kind: 'p',
+        text: 'If you have read this much, thank you very much. I keep wondering if the results would be different in another universe or another lifetime.',
+      },
+      { kind: 'p', text: 'Thank you for everything...........' },
+      {
+        kind: 'p',
+        text: "Please don't share this with anyone and I believe you wouldn't tell this to anyone.........",
       },
     ],
-    closing: 'Thank you for everything.',
   },
 ]
 

@@ -5,12 +5,14 @@ interface PageProps {
   children: ReactNode
   className?: string
   theme?: string
+  /** Temporary mood layered over the theme, e.g. 'sad' while asking to skip. */
+  mood?: string
   /** Chapter pages restore their own scroll position instead of starting at the top. */
   keepScroll?: boolean
 }
 
 /** Shared page wrapper: sets the palette and handles the enter/exit fade. */
-export default function Page({ children, className = '', theme = 'base', keepScroll }: PageProps) {
+export default function Page({ children, className = '', theme = 'base', mood, keepScroll }: PageProps) {
   useEffect(() => {
     if (!keepScroll) window.scrollTo({ top: 0, behavior: 'instant' })
   }, [keepScroll])
@@ -20,6 +22,7 @@ export default function Page({ children, className = '', theme = 'base', keepScr
       id="main"
       tabIndex={-1}
       data-theme={theme}
+      data-mood={mood}
       className={`page ${className}`}
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}

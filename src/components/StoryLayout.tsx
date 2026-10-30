@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, LayoutGrid, Mail } from 'lucide-react'
 import { chapters, type Block, type Chapter } from '../data/stories'
 import PhotoFrame from './PhotoFrame'
 import { ChapterSteps, ReadingProgress } from './ProgressIndicator'
-import { Divider, FloralCorner } from './Botanical'
+import { Divider, FloralCorner, Petals } from './Botanical'
 
 interface StoryLayoutProps {
   chapter: Chapter
@@ -37,6 +37,7 @@ export default function StoryLayout({ chapter, index }: StoryLayoutProps) {
 
   return (
     <>
+      <Petals variant={chapter.theme} count={9} />
       <ReadingProgress />
       <header className="topbar">
         <Link to="/chapters" className="topbar__link">

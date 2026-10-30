@@ -114,10 +114,12 @@ export function Divider({ className }: OrnamentProps) {
   )
 }
 
+export type PetalVariant = 'birthday' | 'ch1' | 'ch2' | 'ch3' | 'sad'
+
 /** A few slow, drifting petals. Hidden entirely when reduced motion is preferred. */
-export function Petals({ count = 7 }: { count?: number }) {
+export function Petals({ count = 7, variant = 'birthday' }: { count?: number; variant?: PetalVariant }) {
   return (
-    <div className="petals" aria-hidden="true">
+    <div className={`petals petals--${variant}`} aria-hidden="true">
       {Array.from({ length: count }, (_, i) => (
         <span
           key={i}

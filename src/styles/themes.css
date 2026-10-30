@@ -89,3 +89,40 @@
 [data-theme='ch3'] .story__quote {
   border-left-color: #d5aaa7;
 }
+
+/* Sad mood — shown while asking "You really want to skip the story?" */
+.page {
+  transition:
+    background-color 1.2s var(--ease),
+    color 1.2s var(--ease);
+}
+
+.page .invitation {
+  transition:
+    filter 1.2s var(--ease),
+    background-color 1.2s var(--ease);
+}
+
+[data-mood='sad'] {
+  --bg: #dfe3e8;
+  --surface: #eef0f3;
+  --fg: #3a4049;
+  --muted: #5f6873;
+  --accent: #5a6573;
+  --accent-soft: #8d98a6;
+  --line: rgba(74, 84, 98, 0.22);
+  --focus: #4a5462;
+  --btn-bg: #4a5462;
+  --btn-fg: #f4f6f8;
+  background:
+    radial-gradient(50rem 34rem at 50% 0%, rgba(152, 166, 184, 0.35), transparent 65%),
+    var(--bg);
+}
+
+[data-mood='sad'] .invitation {
+  filter: saturate(0.4);
+}
+
+[data-mood='sad'] .invitation__corner {
+  color: #8d98a6;
+}

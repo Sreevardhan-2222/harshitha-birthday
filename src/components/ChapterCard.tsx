@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, Check } from 'lucide-react'
+import { ArrowRight, BookOpen, Check } from 'lucide-react'
 import type { Chapter } from '../data/stories'
 import PhotoFrame from './PhotoFrame'
 
@@ -15,7 +15,7 @@ export default function ChapterCard({ chapter, read, index }: ChapterCardProps) 
       <Link
         to={`/chapter/${chapter.id}`}
         className="chapter-card__link"
-        aria-label={`Chapter ${chapter.number}: ${chapter.title}. ${chapter.subtitle}${read ? ' (read)' : ''}`}
+        aria-label={`Open story ${index + 1}? Chapter ${chapter.number}: ${chapter.title}. ${chapter.subtitle}${read ? ' (read)' : ''}`}
       >
         <PhotoFrame
           photo={chapter.photo}
@@ -36,7 +36,9 @@ export default function ChapterCard({ chapter, read, index }: ChapterCardProps) 
           <h2 className="chapter-card__title">{chapter.title}</h2>
           <p className="chapter-card__subtitle">{chapter.subtitle}</p>
           <span className="chapter-card__cta" aria-hidden="true">
-            Read chapter <ArrowUpRight size={16} strokeWidth={1.6} />
+            <BookOpen size={17} strokeWidth={1.6} />
+            Open story {index + 1}?
+            <ArrowRight size={16} strokeWidth={1.6} className="chapter-card__arrow" />
           </span>
         </div>
       </Link>

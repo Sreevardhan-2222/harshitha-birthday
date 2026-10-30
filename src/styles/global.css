@@ -648,6 +648,79 @@ main:focus {
   }
 }
 
+/* Every fifth petal is a small five-petal blossom, so the fall reads as flowers. */
+.petal:nth-child(5n) {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 0;
+  background: var(--blossom, #f1cf6d);
+  -webkit-mask: var(--blossom-shape) center / contain no-repeat;
+  mask: var(--blossom-shape) center / contain no-repeat;
+  opacity: 0.7;
+}
+
+.petals {
+  --blossom-shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cg transform='translate(10 10)'%3E%3Cellipse cy='-5.2' rx='3.4' ry='4.6'/%3E%3Cellipse cy='-5.2' rx='3.4' ry='4.6' transform='rotate(72)'/%3E%3Cellipse cy='-5.2' rx='3.4' ry='4.6' transform='rotate(144)'/%3E%3Cellipse cy='-5.2' rx='3.4' ry='4.6' transform='rotate(216)'/%3E%3Cellipse cy='-5.2' rx='3.4' ry='4.6' transform='rotate(288)'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Chapter 1 — blush and rose */
+.petals--ch1 .petal {
+  background: linear-gradient(135deg, #f4cfd8, #d98ea0);
+}
+.petals--ch1 .petal:nth-child(3n) {
+  background: linear-gradient(135deg, #fff1f3, #ebc6cf);
+}
+.petals--ch1 {
+  --blossom: #e7a9b8;
+}
+
+/* Chapter 2 — antique gold and ivory on navy */
+.petals--ch2 .petal {
+  background: linear-gradient(135deg, #e9d29c, #c6a15b);
+  opacity: 0.5;
+}
+.petals--ch2 .petal:nth-child(3n) {
+  background: linear-gradient(135deg, #fbf3df, #e4d3ad);
+}
+.petals--ch2 {
+  --blossom: #d8b878;
+}
+
+/* Chapter 3 — burgundy and dusty rose */
+.petals--ch3 .petal {
+  background: linear-gradient(135deg, #c3696f, #702d37);
+  opacity: 0.45;
+}
+.petals--ch3 .petal:nth-child(3n) {
+  background: linear-gradient(135deg, #ecd0cd, #d5aaa7);
+}
+.petals--ch3 {
+  --blossom: #a34a51;
+}
+
+/* Sad — slow, pale grey-blue, falling like quiet tears */
+.petals--sad .petal {
+  width: 0.45rem;
+  height: 0.7rem;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  background: linear-gradient(180deg, #d6dde6, #8d9aab);
+  opacity: 0.5;
+  animation-name: drip;
+  animation-duration: 9s !important;
+}
+.petals--sad {
+  --blossom: #a3adba;
+}
+
+@keyframes drip {
+  0% {
+    transform: translate3d(0, -5vh, 0);
+  }
+  100% {
+    transform: translate3d(0, 110vh, 0);
+  }
+}
+
 @media (min-width: 900px) {
   .reveal {
     grid-template-areas:
@@ -743,6 +816,20 @@ main:focus {
   align-items: center;
   gap: 0.75rem;
   margin-top: 2.5rem;
+}
+
+.skip-confirm__icon {
+  display: block;
+  margin: 0 auto 1rem;
+  color: var(--accent-soft);
+}
+
+.skip-confirm__question {
+  font-size: var(--step-3);
+}
+
+.skip-confirm__question:focus {
+  outline: none;
 }
 
 /* ------------------------------------------------------------------
@@ -865,18 +952,34 @@ main:focus {
 .chapter-card__cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 1rem;
-  padding-bottom: 0.15rem;
-  border-bottom: 1px solid currentColor;
-  font-size: var(--step--1);
+  gap: 0.55rem;
+  min-height: 3rem;
+  margin-top: 1.25rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--card-accent);
+  color: #fffdf8;
+  font-size: var(--step-0);
   font-weight: 500;
-  color: var(--card-accent);
-  transition: gap 0.3s var(--ease);
+  line-height: 1.2;
+  box-shadow: 0 10px 24px -14px var(--card-accent);
+  transition:
+    transform 0.3s var(--ease),
+    box-shadow 0.3s var(--ease);
 }
 
-.chapter-card__link:hover .chapter-card__cta {
-  gap: 0.6rem;
+.chapter-card__arrow {
+  transition: transform 0.3s var(--ease);
+}
+
+.chapter-card__link:hover .chapter-card__cta,
+.chapter-card__link:focus-visible .chapter-card__cta {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -14px var(--card-accent);
+}
+
+.chapter-card__link:hover .chapter-card__arrow {
+  transform: translateX(3px);
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
@@ -1010,6 +1113,8 @@ main:focus {
 }
 
 .story {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: clamp(2rem, 5vw, 3rem);
   width: min(100%, 76rem);
